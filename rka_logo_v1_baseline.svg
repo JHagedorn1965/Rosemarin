@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     viewBox="0 0 600 600" width="600" height="600">
+  <defs>
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFE07A"/>
+      <stop offset="50%" stop-color="#E6B800"/>
+      <stop offset="100%" stop-color="#A8800F"/>
+    </linearGradient>
+
+    <radialGradient id="bgGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F4EFE4"/>
+    </radialGradient>
+
+    <!-- Text path arcs for the three virtues
+         (tightened so letters sit just inside the outer ring,
+          almost touching both the inner monogram circle and the gold band) -->
+    <path id="loveArc"    d="M 92,356 A 215,215 0 0 1 244,92"   fill="none"/>
+    <path id="faithArc"   d="M 356,92 A 215,215 0 0 1 508,356"  fill="none"/>
+    <path id="courageArc" d="M 127,473 A 245,245 0 0 0 473,473" fill="none"/>
+
+    <!-- Clip path so the horse stays inside the inner monogram circle -->
+    <clipPath id="innerClip">
+      <circle cx="300" cy="300" r="208"/>
+    </clipPath>
+  </defs>
+
+  <!-- ===== Rings (outside in) — tightened to hug the virtue words ===== -->
+  <circle cx="300" cy="300" r="265" fill="#1B3A5C"/>
+  <circle cx="300" cy="300" r="256" fill="url(#goldGradient)"/>
+  <circle cx="300" cy="300" r="250" fill="url(#bgGradient)"/>
+
+  <!-- Inner monogram circle (now bigger: r=210, was r=180) -->
+  <circle cx="300" cy="300" r="210" fill="#FFFFFF" stroke="#1B3A5C" stroke-width="4"/>
+  <circle cx="300" cy="300" r="204" fill="none" stroke="url(#goldGradient)" stroke-width="1.5"/>
+
+  <!-- ===== Horse silhouette (opaque, clipped to inner circle) ===== -->
+  <g clip-path="url(#innerClip)">
+    <image x="125" y="135"
+           width="350" height="307"
+           preserveAspectRatio="xMidYMid meet"
+           xlink:href="data:image/png;base64,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"/>
+  </g>
+
+  <!-- ===== Golden crown above the K ===== -->
+  <g transform="translate(300, 217)">
+    <rect x="-55" y="20" width="110" height="14" rx="2"
+          fill="url(#goldGradient)" stroke="#7A5C0A" stroke-width="1.2"/>
+    <path d="M -55,20 L -45,-15 L -25,5 L 0,-30 L 25,5 L 45,-15 L 55,20 Z"
+          fill="url(#goldGradient)" stroke="#7A5C0A" stroke-width="1.5"
+          stroke-linejoin="round"/>
+    <circle cx="-45" cy="-15" r="4.5" fill="#C8102E" stroke="#7A5C0A" stroke-width="0.8"/>
+    <circle cx="0"   cy="-30" r="6"   fill="#1E5BA8" stroke="#7A5C0A" stroke-width="0.8"/>
+    <circle cx="45"  cy="-15" r="4.5" fill="#0B5D2E" stroke="#7A5C0A" stroke-width="0.8"/>
+    <circle cx="-30" cy="27" r="3" fill="#C8102E"/>
+    <circle cx="0"   cy="27" r="3" fill="#FFFFFF" stroke="#7A5C0A" stroke-width="0.6"/>
+    <circle cx="30"  cy="27" r="3" fill="#1E5BA8"/>
+  </g>
+
+  <!-- ===== RKA monogram (gold, on top of horse, with subtle outline for legibility) ===== -->
+  <text x="300" y="380"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="162" font-weight="700" text-anchor="middle"
+        fill="url(#goldGradient)"
+        stroke="#0A0A0A" stroke-width="6"
+        paint-order="stroke fill"
+        letter-spacing="2">RKA</text>
+
+  <!-- ===== Curved virtue words ===== -->
+  <text font-family="Georgia, 'Times New Roman', serif"
+        font-size="42" font-weight="700" letter-spacing="8" fill="#E91E8C">
+    <textPath href="#loveArc" startOffset="50%" text-anchor="middle">LOVE</textPath>
+  </text>
+  <text font-family="Georgia, 'Times New Roman', serif"
+        font-size="42" font-weight="700" letter-spacing="8" fill="#1E5BA8">
+    <textPath href="#faithArc" startOffset="50%" text-anchor="middle">FAITH</textPath>
+  </text>
+  <text font-family="Georgia, 'Times New Roman', serif"
+        font-size="42" font-weight="700" letter-spacing="8" fill="#0B5D2E">
+    <textPath href="#courageArc" startOffset="50%" text-anchor="middle">COURAGE</textPath>
+  </text>
+</svg>
