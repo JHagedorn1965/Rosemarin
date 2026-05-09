@@ -28,6 +28,12 @@
         0.108 0.211 0.041 0 0.19
         0     0     0     1 0"/>
     </filter>
+
+    <!-- Colorize horse to match outer ring (#1B3A5C) -->
+    <filter id="horseNavy">
+      <feFlood flood-color="#1B3A5C" result="color"/>
+      <feComposite in="color" in2="SourceGraphic" operator="in"/>
+    </filter>
   </defs>
 
   <!-- Outer rings -->
@@ -56,7 +62,7 @@
   </text>
 
   <!-- Horse (above crown and virtue words, below RKA) — navy blue tint, 80% opacity (20% transparent) -->
-  <g opacity="0.7">
+  <g opacity="0.7" filter="url(#horseNavy)">
     <image x="38" y="82"
            width="484" height="484"
            preserveAspectRatio="xMidYMid meet"
@@ -88,6 +94,12 @@
   <!-- Est. 2027 arched above crown -->
   <defs>
     <path id="estArc" d="M 206.6,132.3 A 199,199 0 0 1 393.4,132.3" fill="none"/>
+
+    <!-- Colorize horse to match outer ring (#1B3A5C) -->
+    <filter id="horseNavy">
+      <feFlood flood-color="#1B3A5C" result="color"/>
+      <feComposite in="color" in2="SourceGraphic" operator="in"/>
+    </filter>
   </defs>
   <text font-family="Georgia, 'Times New Roman', serif"
         font-size="16" font-weight="700" fill="#000000" letter-spacing="2">
